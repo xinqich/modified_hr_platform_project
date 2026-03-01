@@ -11,7 +11,7 @@ class Role(models.Model):
 
 
 class User(AbstractUser):
-    role = models.ForeignKey(Role, on_delete=models.SET_NULL, blank=True, null=True)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
 
     class Meta:
         permissions = [
